@@ -1,7 +1,7 @@
 let axios = require('axios');
 let UsersModule = require('../src/user');
 
-jest.mock('axios');
+axios = jest.fn(axios);
 
 test('should fetch users', () => {
   const users = [{name: 'Bob'}];
